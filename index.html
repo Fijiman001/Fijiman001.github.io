@@ -45,6 +45,19 @@
             <h3>Assessing Green Bond Yield Differences</h3>
             <p>I use and compared multiple matching methods, in particular a one-to‑one matching algorithm (Hungarian method) to pair 100 green bonds with conventional counterparts on maturity, coupon, issuer and issuance timing, after filtering out callable and supranational bonds to avoid optionality and benchmark distortions.  This quasi‑experimental setup minimises omitted‑variable bias and isolates the “greenium” effect on yield to maturity (YTM).  Robustness checks included panel regressions with issuer fixed effects and macro controls (Euribor, Bund yield, VIX), which largely attenuated the greenium, highlighting sensitivity to model specification.  Finally, Nelson–Siegel–Svensson curve estimates for both bond groups revealed only marginal term‑structure divergences, suggesting liquidity and characteristic differences drive much of the observed spread.</p>
             <p>
+                One of my most recent applications of statistical methods was in my second year empirical
+                project in my masters analysing the existence of the “greenium” in corporate bonds. I chose
+                to employ a matching method (Pietsch and Salakhova 2022) rather than a conventional panel
+                or OLS regression (Zerbib 2019). The matching method pairs green bonds with similar conventional 
+                bonds based on key characteristics such as maturity, credit rating, and issuer profile,
+                allowing for a direct comparison of yield to maturity (YTM). This approach was preferable to
+                a panel regression as it minimises the risk of an omitted variable bias. For a causal identification, 
+                the panel regression approach needs additional data for macroeconomic controls and fixed
+                effects for bond characteristic. By implementing a matching method, I was able to create a
+                quasi-experimental setup that more accurately isolates the greenium effect from confounding
+                influences.
+            </p>
+            <p>
             <a href="https://github.com/Fijiman001/EGR-Empirical-Project/blob/main/Empirical_Project__Final_Report__Liquidity_of_Green_Bonds.pdf" target="_blank">Report (PDF)</a>
             <a href="https://github.com/Fijiman001/EGR-Empirical-Project" target="_blank">GitHub</a>
             </p>
@@ -52,7 +65,22 @@
         
         <div class="project">
             <h3>Sunlight Synchronisation: DST &amp; Emissions</h3>
-            <p>Analysed Australian electricity CO₂ emissions and consumption under heterogeneous Daylight Saving Time (DST) adoption using a Difference-in‑Differences‑in‑Differences (DDD) framework to control for state‑specific shocks and confounders. Leveraging an event‑study design across multiple years, we tested the robustness of the parallel‑trends assumption via pre‑trends checks and external control groups.  Results indicated a small, statistically insignificant reduction in emissions and consumption, with recent solar uptake amplifying DST’s environmental impact—motivating a deeper focus on post‑2015 solar penetration.  Extensive visual diagnostics (histograms, energy curve plots) were also created.
+            <p>
+                Another empirical project I worked on during my first year at TSE involved analysing the
+                Australian electricity market using an event study design. The study focused on the impact of
+                daylight saving time (DST) on CO2 emissions and electricity consumption. Given the heterogeneous 
+                adoption of DST across Australian regions, we leveraged a Difference-in-Differences-inDifferences (DDD) 
+                (Gruber 1994) framework to control for unobserved state-specific shocks and
+                identify the causal impact of DST on electricity consumption and emissions. This approach
+                was more robust than a standard Difference-in-Differences (DiD) model, as it accounted for
+                additional confounding factors (see Callaway and Sant’Anna (2021), Heckman et al. (1997), 
+                and Kellogg and Wolff (2008)) and ensured that the “parallel trends assumption” held. Our
+                findings indicated that DST has a positive yet statistically insignificant effect on greenhouse
+                gas emissions and energy consumption, aligning with existing literature. However, the data
+                exhibited a visible decrease in CO2 emissions in the recent years, which coincides with the
+                increased uptake in solar energy production and amplifying the effect DST can have on CO2
+                emissions, suggesting a more focused analysis on recent years.
+            </p>
             <p>
             <a href="https://github.com/Fijiman001/applied-econometrics-dst/blob/master/FinalReport.pdf" target="_blank">Report (PDF)</a>
             <a href="https://github.com/Fijiman001/applied-econometrics-dst" target="_blank">GitHub</a>
@@ -61,7 +89,19 @@
         
         <div class="project">
             <h3>Financial Econometrics 1: Volatility &amp; Risk Modeling in </h3>
-            <p>Implemented hand‑coded QMLE for ARCH, GARCH and leverage‑augmented (NAGARCH) models on 15 years of S&amp;P 500 returns, comparing Gaussian vs Student‑t errors to enhance one‑day VaR forecasts :contentReference[oaicite:3]{index=3}.
+            <p>
+                In my Financial Econometrics coursework, I have applied a range of statistical techniques and
+                theoretical frameworks to address volatility, risk, and high-dimensional challenges in financial
+                data of high and low frequencies. I employed time-series models—including ARCH, GARCH
+                (and its leverage-augmented variants such as NAGARCH)—to capture time-varying volatility,
+                co-movement across asset classes, and risk spillovers. Through an empirical project using
+                hand-written Quasi-Maximum Likelihood Estimator (QMLE) on S&P 500 returns, I compared
+                multiple model specifications (Gaussian and Student-t distributions, varying data-generating
+                processes, and leverage factors). The results have shown that data-specific GARCH models
+                outperform RiskMetrics baseline in returns forecasting and Value at Risk (VaR) modelling
+                tasks, despite QMLE’s sensitivity to small samples and local minima—challenges I mitigated
+                via grid search optimisation.
+            </p>
             <p>
             <a href="https://github.com/Fijiman001/Financial-Econometrics/blob/main/Homework%201/Financial_Econometrics_HW1_Hafez_Koehler_Suero.pdf" target="_blank">Report (PDF)</a>
             <a href="https://github.com/Fijiman001/Financial-Econometrics/tree/main/Homework%201" target="_blank">GitHub</a>
@@ -69,7 +109,16 @@
 
         <div class="project">
             <h3>Financial Econometrics 2</h3>
-            <p> Applied PCA on S&amp;P 500 cross‑section to extract latent factors and contrasted with Fama‑French factors in observable covariance models, finding PCA‑based factors yielded superior coverage in UC tests.  Extended analysis to multivariate BEKK and constant‑correlation GARCH, demonstrating BEKK’s better fit (Kupiec and Christoffersen tests) despite higher computational cost.  Data handling and estimation were fully automated using Python (pandas, numpy) and cross‑validated via rolling windows.
+            <p> Applied PCA on S&amp;P 500 cross‑section to extract latent factors and contrasted with Fama‑French factors in observable covariance models, finding PCA‑based factors yielded superior coverage in UC tests. 
+            <p>
+                To manage high-dimensional data, I applied Principal Component Analysis (PCA) for factor
+                extraction and dimensionality reduction, isolating the principal drivers of asset-price dynamics.
+                In another project analysing a portfolio of stocks, I used continuous time structural models
+                for high frequency data, studying market microstructure noise and estimator convergence for
+                volatility estimates. This involved evaluating estimator bias under autocorrelation—contrasting
+                naive OLS standard errors with Newey-West adjustments—and verifying convergence properties
+                across synchronous and asynchronous data streams.
+            </p>
             <p>
             <a href=" " target="_blank">TO BE ADDED: Report (PDF)</a>
             <a href="https://github.com/Fijiman001/Financial-Econometrics/tree/main/Nour%20homework%202%20(Project)" target="_blank">GitHub</a>
@@ -85,13 +134,18 @@
         
         <div class="project">
             <h3>Extreme Risk Analysis of FX Markets</h3>
-            <p>Studied USD–EUR daily log‑returns (2004–2023) using Peaks‑Over‑Threshold EVT:
-                fitted Generalised Pareto MLE, then switched to Hill estimator when γ > 0 for efficiency. 
-                Extrapolated 99.5% and 99.98% quantiles, revealing underestimation by empirical maxima
-                and underscoring the need for systematic tail modeling in capital reserve calculations.
-                Graphical diagnostics (moment and Q‑Q plots) confirmed heavy tails; 
-                additional intra‑day high analysis via Weibull fits highlighted even greater tail risk.  
-                Findings inform hedging strategies and regulatory stress‑testing for currency crises.
+            <p>
+                During the “Extreme Risk Analysis” course, I analysed the extreme value behaviour of the
+                USD–Euro exchange rate between January 2004 and December 2023. In contrast to the blockmaxima approach, 
+                I focused on threshold exceedances to model Value at Risk (VaR) and
+                Expected Shortfall (ES). Suspecting heavy-tailed data, I employed the Generalised Pareto 
+                maximum likelihood estimator without assuming a specific form for the extreme value index (γ) or
+                the distribution’s shape. Only after estimating a positive and statistically significant γ did I
+                switch to the Hill estimator and its corresponding extreme quantile estimator, taking advantage 
+                of their superior asymptotic variance properties relative to the generalised approach. I
+                also investigated intra-day highs to capture the intra-day dynamics of the FX rate, given that
+                liquidity and capital regulations are increasingly shifting from a purely daily perspective to an
+                intra-day view. The results indicated that intra-day risks are considerably greater, driven by
             </p>
             <p>
             <a href="https://github.com/Fijiman001/ERA-Project/blob/main/Extreme_Value_Theory_USD_EUR.pdf" target="_blank">Report (PDF)</a>
@@ -102,50 +156,17 @@
             <h3>Extreme‑Weather Risk and U.S. Insurance Prices (Multivariate&nbsp;Time‑Series Project)</h3>
             <p>Examined the impact of extreme weather on insurance prices by building a VAR model with media‑derived climate‑risk indices, inflation‑adjusted disaster costs, and CPI/PPI in Europe :contentReference[oaicite:5]{index=5}&#8203;:contentReference[oaicite:6]{index=6}.  After confirming no cointegration among I(1) variables, we selected lags via Hannan‑Quinn, then conducted Granger causality tests and computed impulse response functions to trace shock propagation.  Robustness checks swapped CPI for PPI to test producer‑ vs consumer‑side sensitivities; results showed persistent insurance price responses to climate shocks.  All time‑series estimation and diagnostics were performed in R (vars, tseries).
             <p>
-                For the course <em>Multivariate Time Series</em> I investigated whether
-                extreme‑weather shocks and media‑based perceptions of climate risk feed through
-                to U.S. property‑insurance prices. The data span January&nbsp;2005 – December 2018
-                at monthly frequency and combine four sources: (i) the
-                <strong>Climate Physical Risk Index</strong> (PRI) from Bua&nbsp;<em>et&nbsp;al.</em>&nbsp;(2024),
-                aggregated from daily Reuters news; (ii) inflation‑adjusted
-                <strong>disaster costs</strong> from NOAA’s NCEI; (iii) the
-                <strong>Consumer Price Index</strong> for tenants’ and household insurance; and
-                (iv) the <strong>Producer Price Index</strong> for homeowners’ insurance, used as a
-                robustness check.
-            </p>
-            <p>
-                After visual inspection each series was tested for unit‑root behaviour with
-                ADF, Phillips–Perron, and KPSS procedures. Where necessary,
-                logarithms and first differences were taken to achieve stationarity.
-                Cointegration tests (Engle–Granger and Johansen) showed no long‑run
-                equilibrium among the I(1) variables, so the analysis proceeded with a
-                <strong>VARMA(1,1)</strong> specification; the Hannan–Quinn criterion
-                guided lag selection because of its consistency in small samples.
-            </p>
-            <p>
-                Granger‑causality tests revealed <em>no</em> evidence that either disaster
-                costs or the PRI precede movements in the consumer insurance CPI.  By
-                contrast, CPI innovations appeared to Granger‑cause the PRI, a pattern that
-                is plausibly driven by media reports on rising premiums rather than a true
-                causal channel. Impulse‑response functions corroborated these findings:
-                shocks to costs or perceived risk produced no significant or persistent
-                response in insurance prices, whereas a CPI shock generated a modest, delayed
-                uptick in the PRI lasting roughly one year.
-            </p>
-            <p>
-                Substituting the producer‑side PPI for the CPI confirmed the null results:
-                neither disaster costs nor the PRI affected insurer pricing, and
-                producer‑price shocks failed to move the risk index. Residual diagnostics 
-                upheld the robustness of the chosen model.
-            </p>
-            
-            <p>
-                Taken together, the evidence suggests that—at the national, monthly level
-                observed—U.S. household insurance premiums are <em>not</em> yet systematically
-                repriced in response to either realised disaster losses or heightened
-                climate‑risk salience in the media.  Instead, any detectable link runs from
-                price changes to subsequent news coverage, highlighting the need for
-                higher‑resolution regional data to uncover local climate‑pricing dynamics.
+                As part of the course “Multivariate Time Series” I examined how extreme weather events affect
+                insurance prices by combining media-derived indicators of climate risk (Bua et al. 2024) with
+                inflation-adjusted disaster costs and consumer price indices for household insurance. Stationarity 
+                and unit root tests were run and I estimated a Vector Autoregressive (VAR / VARMA)
+                model after ensuring cointegration among I(1) variables was not present. The Hannan-Quinn
+                criterion guided the selection of optimal lag lengths rather than AIC due to AIC not being
+                consistent in small samples (Hurvich and Tsai 1989). Subsequently, I used Granger causality
+                tests to reveal the temporal influence among climate risk indicators, disaster costs, and 
+                insurance prices, and impulse response functions (IRFs) to measure the magnitude and persistence
+                of shocks. These steps were followed by robustness checks substituting the consumer-focused
+                index (CPI) with the producer-side measure (PPI) to investigate whether producer cost structures also responded to climatic shocks.
             </p>  
             <p>
             <a href="https://github.com/Fijiman001/Multivariate-Time-Series/blob/main/Multivariate_Time_Series_Paper.pdf" target="_blank">Report (PDF)</a>
@@ -156,44 +177,22 @@
             <h3>Scoring &amp; Default Prediction</h3>
             <section>
             <p>
-                Drawing on roughly 600 000 firm‑year observations from WRDS Compustat and CRSP
-                covering the period 1978‑2023, I built a complete credit‑risk‑prediction
-                pipeline in R, relying on the <em>tidyverse</em> for data wrangling and
-                <em>glmnet</em>, <em>randomForest</em>, and <em>pROC</em> for modelling and
-                evaluation.
-            </p>
-            <p>
-                The first stage focused on data engineering: extreme financial ratios were
-                winsorised, all infinite or missing values were imputed, and
-                <code>gvkey–permno</code> links were reconciled to yield a clean,
-                time‑ordered panel suitable for rolling‑window splits.
-            </p>
-            <p>
-                As a benchmark I replicated the Altman Z‑score with a plain logistic
-                regression, which produced an AUC of about 0.72.  Because defaults are rare,
-                I then applied inverse‑frequency class weights; this single adjustment cut
-                false‑negative errors by a factor of six and lifted the AUC to 0.89.
-                Pushing sparsity further, a weighted LASSO retained only five core financial
-                ratios yet still preserved an AUC of 0.90.
-            </p>
-            <p>
-                To capture non‑linear effects I trained a 500‑tree Random Forest.  Its
-                class‑weighted variant delivered the strongest hold‑out result, with an AUC
-                close to 0.94 and only eleven missed bankruptcies out of 106.
-            </p>
-            <p>
-                Realistic performance was assessed with five‑fold <em>time‑series</em>
-                cross‑validation.  Under this stricter regime Altman‑style models dropped to
-                AUC 0.61, and even a Box–Cox‑transformed Altman specification slipped to
-                 0.54—evidence of look‑ahead bias in static splits.  Finally, I implemented
-                structural Distance‑to‑Default estimators (Schumway 2001 and an iterative
-                Merton approach); both hovered near random, at AUC ≈ 0.51, underscoring the
-                difficulty of market‑based models when applied to accounting‑heavy data.
-            </p>
-            <p>
-                In sum, the combination of class weighting and ensemble trees provided the
-                most dependable balance between recall and interpretability for highly
-                imbalanced default data.
+                As part of the course on scoring methods, based partly on Hastie et al. (2009), I conducted analyses
+                aimed at accurately classifying and predicting defaults using statistical and machine
+                learning methods. Starting with logistic regression, I evaluated limitations of the approach,
+                particularly in terms of flexibility, variable selection efficiency, and its performance in 
+                scenarios with non-linearities and interactions among variables. To address these shortcomings,
+                I explored penalised regression approaches, such as Lasso and Ridge regressions, improving
+                variable selection capabilities and treating sparsity of the data. I compared this benchmark
+                with decision tree and ensemble models including AdaBoost and LogitBoost, which strategically 
+                aggregate predictions from multiple weaker classifiers creating more robust and accurate
+                predictive outcomes.
+                To ensure a reliable assessment of model performance, I compared two validation methods:
+                the hold-out approach and K-fold cross-validation. While the hold-out approach provided a
+                straightforward split into training and test sets, K-fold cross-validation offered greater 
+                precision by mitigating sampling risks and reducing the instability arising from limited training
+                data. Despite its computational intensity, cross-validation was instrumental in confirming the
+                robustness and stability of the predictive models developed.
             </p>
             <p>
             <a href="https://github.com/Fijiman001/Scoring-project-Alex/blob/main/Code/Project%20-%20Scoring_models.qmd" target="_blank">Report (PDF)</a>
