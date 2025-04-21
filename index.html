@@ -92,8 +92,54 @@
         </div>
         
         <div class="project">
-            <h3>Multivariate Time Series &amp; Climatic Impacts</h3>
+            <h3>Extreme‑Weather Risk and U.S. Insurance Prices (Multivariate&nbsp;Time‑Series Project)</h3>
             <p>Examined the impact of extreme weather on insurance prices by building a VAR model with media‑derived climate‑risk indices, inflation‑adjusted disaster costs, and CPI/PPI in Europe :contentReference[oaicite:5]{index=5}&#8203;:contentReference[oaicite:6]{index=6}.  After confirming no cointegration among I(1) variables, we selected lags via Hannan‑Quinn, then conducted Granger causality tests and computed impulse response functions to trace shock propagation.  Robustness checks swapped CPI for PPI to test producer‑ vs consumer‑side sensitivities; results showed persistent insurance price responses to climate shocks.  All time‑series estimation and diagnostics were performed in R (vars, tseries).
+            <p>
+                For the course <em>Multivariate Time Series</em> I investigated whether
+                extreme‑weather shocks and media‑based perceptions of climate risk feed through
+                to U.S. property‑insurance prices. The data span January&nbsp;2005 – December 2018
+                at monthly frequency and combine four sources: (i) the
+                <strong>Climate Physical Risk Index</strong> (PRI) from Bua&nbsp;<em>et&nbsp;al.</em>&nbsp;(2024),
+                aggregated from daily Reuters news; (ii) inflation‑adjusted
+                <strong>disaster costs</strong> from NOAA’s NCEI; (iii) the
+                <strong>Consumer Price Index</strong> for tenants’ and household insurance; and
+                (iv) the <strong>Producer Price Index</strong> for homeowners’ insurance, used as a
+                robustness check.
+            </p>
+            <p>
+                After visual inspection each series was tested for unit‑root behaviour with
+                ADF, Phillips–Perron, and KPSS procedures. Where necessary,
+                logarithms and first differences were taken to achieve stationarity.
+                Cointegration tests (Engle–Granger and Johansen) showed no long‑run
+                equilibrium among the I(1) variables, so the analysis proceeded with a
+                <strong>VARMA(1,1)</strong> specification; the Hannan–Quinn criterion
+                guided lag selection because of its consistency in small samples.
+            </p>
+            <p>
+                Granger‑causality tests revealed <em>no</em> evidence that either disaster
+                costs or the PRI precede movements in the consumer insurance CPI.  By
+                contrast, CPI innovations appeared to Granger‑cause the PRI, a pattern that
+                is plausibly driven by media reports on rising premiums rather than a true
+                causal channel. Impulse‑response functions corroborated these findings:
+                shocks to costs or perceived risk produced no significant or persistent
+                response in insurance prices, whereas a CPI shock generated a modest, delayed
+                uptick in the PRI lasting roughly one year.
+            </p>
+            <p>
+                Substituting the producer‑side PPI for the CPI confirmed the null results:
+                neither disaster costs nor the PRI affected insurer pricing, and
+                producer‑price shocks failed to move the risk index. Residual diagnostics 
+                upheld the robustness of the chosen model.
+            </p>
+            
+            <p>
+                Taken together, the evidence suggests that—at the national, monthly level
+                observed—U.S. household insurance premiums are <em>not</em> yet systematically
+                repriced in response to either realised disaster losses or heightened
+                climate‑risk salience in the media.  Instead, any detectable link runs from
+                price changes to subsequent news coverage, highlighting the need for
+                higher‑resolution regional data to uncover local climate‑pricing dynamics.
+            </p>  
             <p>
             <a href="https://github.com/Fijiman001/Multivariate-Time-Series/blob/main/Multivariate_Time_Series_Paper.pdf" target="_blank">Report (PDF)</a>
             <a href="https://github.com/Fijiman001/Multivariate-Time-Series" target="_blank">GitHub</a>
