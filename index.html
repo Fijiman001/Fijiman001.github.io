@@ -60,23 +60,91 @@
         </div>
         
         <div class="project">
-            <h3>Volatility &amp; Risk Modeling in Financial Econometrics</h3>
-            <p>Implemented hand‑coded QMLE for ARCH, GARCH and leverage‑augmented (NAGARCH) models on 15 years of S&amp;P 500 returns, comparing Gaussian vs Student‑t errors to enhance one‑day VaR forecasts :contentReference[oaicite:3]{index=3}.  Applied PCA on S&amp;P 500 cross‑section to extract latent factors and contrasted with Fama‑French factors in observable covariance models, finding PCA‑based factors yielded superior coverage in UC tests.  Extended analysis to multivariate BEKK and constant‑correlation GARCH, demonstrating BEKK’s better fit (Kupiec and Christoffersen tests) despite higher computational cost.  Data handling and estimation were fully automated using Python (pandas, numpy) and cross‑validated via rolling windows.
+            <h3>Financial Econometrics 1: Volatility &amp; Risk Modeling in </h3>
+            <p>Implemented hand‑coded QMLE for ARCH, GARCH and leverage‑augmented (NAGARCH) models on 15 years of S&amp;P 500 returns, comparing Gaussian vs Student‑t errors to enhance one‑day VaR forecasts :contentReference[oaicite:3]{index=3}.
+            <p>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/blob/main/Homework%201/Financial_Econometrics_HW1_Hafez_Koehler_Suero.pdf" target="_blank">Report (PDF)</a>"
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/tree/main/Homework%201" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Financial Econometrics 2</h3>
+            <p> Applied PCA on S&amp;P 500 cross‑section to extract latent factors and contrasted with Fama‑French factors in observable covariance models, finding PCA‑based factors yielded superior coverage in UC tests.  Extended analysis to multivariate BEKK and constant‑correlation GARCH, demonstrating BEKK’s better fit (Kupiec and Christoffersen tests) despite higher computational cost.  Data handling and estimation were fully automated using Python (pandas, numpy) and cross‑validated via rolling windows.
+            <p>
+            <a href=" " target="_blank">TO BE ADDED: Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/tree/main/Nour%20homework%202%20(Project)" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Financial Econometrics 3</h3>
+            <p> Extended analysis to multivariate BEKK and constant‑correlation GARCH, demonstrating BEKK’s better fit (Kupiec and Christoffersen tests) despite higher computational cost.  Data handling and estimation were fully automated using Python (pandas, numpy) and cross‑validated via rolling windows.
+            <p>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/blob/main/Homework%204%20Serge/Financial_Econometrics_Project_Serge.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/Financial-Econometrics/tree/main/Homework%204%20Serge" target="_blank">GitHub</a>
         </div>
         
         <div class="project">
             <h3>Extreme Risk Analysis of FX Markets</h3>
             <p>Studied USD–EUR daily log‑returns (2004–2023) using Peaks‑Over‑Threshold EVT: fitted Generalised Pareto MLE, then switched to Hill estimator when γ > 0 for efficiency, adjusting CIs for serial dependence :contentReference[oaicite:4]{index=4}.  Extrapolated 99.5% and 99.98% quantiles, revealing underestimation by empirical maxima and underscoring the need for systematic tail modeling in capital reserve calculations.  Graphical diagnostics (moment and Q‑Q plots) confirmed heavy tails; additional intra‑day high analysis via Weibull fits highlighted even greater tail risk.  Findings inform hedging strategies and regulatory stress‑testing for currency crises.
+            <p>
+            <a href="https://github.com/Fijiman001/ERA-Project/blob/main/Extreme_Value_Theory_USD_EUR.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/ERA-Project" target="_blank">GitHub</a>
         </div>
         
         <div class="project">
             <h3>Multivariate Time Series &amp; Climatic Impacts</h3>
             <p>Examined the impact of extreme weather on insurance prices by building a VAR model with media‑derived climate‑risk indices, inflation‑adjusted disaster costs, and CPI/PPI in Europe :contentReference[oaicite:5]{index=5}&#8203;:contentReference[oaicite:6]{index=6}.  After confirming no cointegration among I(1) variables, we selected lags via Hannan‑Quinn, then conducted Granger causality tests and computed impulse response functions to trace shock propagation.  Robustness checks swapped CPI for PPI to test producer‑ vs consumer‑side sensitivities; results showed persistent insurance price responses to climate shocks.  All time‑series estimation and diagnostics were performed in R (vars, tseries).
+            <p>
+            <a href="https://github.com/Fijiman001/Multivariate-Time-Series/blob/main/Multivariate_Time_Series_Paper.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/Multivariate-Time-Series" target="_blank">GitHub</a>
         </div>
         
         <div class="project">
             <h3>Scoring &amp; Default Prediction</h3>
-            <p>Benchmarking logistic regression against Lasso/Ridge penalised models and ensemble learners (AdaBoost, LogitBoost), we carried out extensive model selection on credit default data using Python’s scikit‑learn :contentReference[oaicite:7]{index=7}&#8203;:contentReference[oaicite:8]{index=8}.  Model performance was evaluated via hold‑out and 10‑fold cross‑validation, measuring accuracy, AUC, and Pseudo R², with PRE analyses to quantify error reductions.  Penalised methods improved variable selection and model sparsity; ensemble methods further enhanced predictive power by aggregating weak learners.  The final pipeline included automated hyperparameter tuning (grid search) and SHAP‑based interpretability assessments.
+            <section>
+            <p>
+                Drawing on roughly 600 000 firm‑year observations from WRDS Compustat and CRSP
+                covering the period 1978‑2023, I built a complete credit‑risk‑prediction
+                pipeline in R, relying on the <em>tidyverse</em> for data wrangling and
+                <em>glmnet</em>, <em>randomForest</em>, and <em>pROC</em> for modelling and
+                evaluation.
+            </p>
+            <p>
+                The first stage focused on data engineering: extreme financial ratios were
+                winsorised, all infinite or missing values were imputed, and
+                <code>gvkey–permno</code> links were reconciled to yield a clean,
+                time‑ordered panel suitable for rolling‑window splits.
+            </p>
+            <p>
+                As a benchmark I replicated the Altman Z‑score with a plain logistic
+                regression, which produced an AUC of about 0.72.  Because defaults are rare,
+                I then applied inverse‑frequency class weights; this single adjustment cut
+                false‑negative errors by a factor of six and lifted the AUC to 0.89.
+                Pushing sparsity further, a weighted LASSO retained only five core financial
+                ratios yet still preserved an AUC of 0.90.
+            </p>
+            <p>
+                To capture non‑linear effects I trained a 500‑tree Random Forest.  Its
+                class‑weighted variant delivered the strongest hold‑out result, with an AUC
+                close to 0.94 and only eleven missed bankruptcies out of 106.
+            </p>
+            <p>
+                Realistic performance was assessed with five‑fold <em>time‑series</em>
+                cross‑validation.  Under this stricter regime Altman‑style models dropped to
+                AUC 0.61, and even a Box–Cox‑transformed Altman specification slipped to
+                 0.54—evidence of look‑ahead bias in static splits.  Finally, I implemented
+                structural Distance‑to‑Default estimators (Schumway 2001 and an iterative
+                Merton approach); both hovered near random, at AUC ≈ 0.51, underscoring the
+                difficulty of market‑based models when applied to accounting‑heavy data.
+            </p>
+            <p>
+                In sum, the combination of class weighting and ensemble trees provided the
+                most dependable balance between recall and interpretability for highly
+                imbalanced default data.
+            </p>
+            <p>
+            <a href="https://github.com/Fijiman001/Scoring-project-Alex/blob/main/Code/Project%20-%20Scoring_models.qmd" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/Scoring-project-Alex/tree/main" target="_blank">GitHub</a>
         </div>
         </section>
 
