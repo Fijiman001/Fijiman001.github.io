@@ -15,6 +15,7 @@
     section { margin-bottom: 2rem; }
     .project, .experience-item, .edu-item { margin-bottom: 1rem; }
     footer { background: #f4f4f4; text-align: center; padding: 1rem 0; font-size: 0.9rem; }
+    .project a { margin-right: 0.5rem; }
   </style>
 </head>
 <body>
@@ -41,14 +42,32 @@
       <h2>Research & Projects</h2>
       <div class="project">
         <h3>Assessing Green Bond Yield Differences</h3>
-        <p>A multi-method approach analyzing yield differences between green and conventional bonds using web-scraped data from the Frankfurt Stock Exchange.</p>
-        <a href="https://github.com/Fijiman001/EGR-Empirical-Project/blob/main/Empirical_Project__Final_Report__Liquidity_of_Green_Bonds.pdf" target="_blank">View Report (PDF)</a>
+        <p>Analyzed the “greenium” using a matching method pairing green and conventional bonds based on maturity, credit rating, and issuer profile to isolate yield differences, minimizing omitted variable bias.
+        <a href="https://github.com/Fijiman001/EGR-Empirical-Project/blob/main/Empirical_Project__Final_Report__Liquidity_of_Green_Bonds.pdf" target="_blank">Report (PDF)</a>
+        <a href="https://github.com/Fijiman001/EGR-Empirical-Project" target="_blank">GitHub</a></p>
       </div>
       <div class="project">
-        <h3>Sunlight Synchronisation</h3>
-        <p>Exploring the influence of Daylight Saving Time on CO₂ emissions and electricity consumption in Australia’s grid.</p>
+        <h3>Sunlight Synchronisation: DST & Emissions</h3>
+        <p>Studied the impact of Daylight Saving Time on CO₂ emissions and electricity consumption in Australia's electricity market using a Difference-in-Differences-in-Differences framework to control for state-specific shocks.
+        <a href="https://github.com/Fijiman001/applied-econometrics-dst/blob/master/FinalReport.pdf" target="_blank">Report (PDF)</a>
+        <a href="https://github.com/Fijiman001/applied-econometrics-dst" target="_blank">GitHub</a></p>
       </div>
-      <!-- Add future projects here -->
+      <div class="project">
+        <h3>Volatility & Risk Modeling in Financial Econometrics</h3>
+        <p>Implemented ARCH/GARCH and leverage-augmented models via hand-written QMLE on S&amp;P 500 returns to compare distributional assumptions, enhancing VaR forecasting. Applied PCA for factor extraction and continuous-time structural models to analyze market microstructure noise.</p>
+      </div>
+      <div class="project">
+        <h3>Extreme Risk Analysis of FX Markets</h3>
+        <p>Modeled tail risk in the USD–EUR exchange rate (2004–2023) using threshold exceedances and Generalised Pareto distributions, switching to Hill estimator for efficiency, and adjusting confidence intervals for serial dependence, revealing significant intra-day volatility risks.</p>
+      </div>
+      <div class="project">
+        <h3>Multivariate Time Series & Climatic Impacts</h3>
+        <p>Examined how extreme weather events affect insurance prices by estimating VAR models with climate risk indicators and disaster cost indices, using Granger causality and impulse response functions, and conducting robustness checks with CPI and PPI metrics.</p>
+      </div>
+      <div class="project">
+        <h3>Scoring & Default Prediction</h3>
+        <p>Compared logistic regression, Lasso/Ridge penalized methods, and ensemble classifiers (AdaBoost, LogitBoost) for credit default scoring, validating models via hold-out and K-fold cross-validation to ensure robust predictive performance.</p>
+      </div>
     </section>
 
     <section id="experience">
@@ -107,3 +126,4 @@
   </footer>
 </body>
 </html>
+<!-- End of index.html -->
