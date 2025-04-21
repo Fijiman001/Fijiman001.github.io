@@ -1,7 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexander M. Köhler</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+    header { background: #004080; color: white; padding: 1rem 0; }
+    nav { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: white; text-decoration: none; margin-left: 1rem; }
+    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    h1, h2 { color: #004080; }
+    section { margin-bottom: 2rem; }
+    .project, .experience-item, .edu-item { margin-bottom: 1rem; }
+    footer { background: #f4f4f4; text-align: center; padding: 1rem 0; font-size: 0.9rem; }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <nav>
+      <div class="logo"><h1>Alexander M. Köhler</h1></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a final-year Economics master's student at Toulouse School of Economics, specializing in financial mathematics, econometric analysis, and risk management. I am seeking roles in trading or structuring in financial markets, starting end of 2025.</p>
+    </section>
+
+    <section id="research">
+      <h2>Research & Projects</h2>
+      <div class="project">
+        <h3>Assessing Green Bond Yield Differences</h3>
+        <p>A multi-method approach analyzing yield differences between green and conventional bonds using web-scraped data from the Frankfurt Stock Exchange.</p>
+        <a href="https://github.com/Fijiman001/EGR-Empirical-Project/blob/main/Empirical_Project__Final_Report__Liquidity_of_Green_Bonds.pdf" target="_blank">View Report (PDF)</a>
+      </div>
+      <div class="project">
+        <h3>Sunlight Synchronisation</h3>
+        <p>Exploring the influence of Daylight Saving Time on CO₂ emissions and electricity consumption in Australia’s grid.</p>
+      </div>
+      <!-- Add future projects here -->
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <div class="experience-item">
+        <h3>Trading Intern, DWS Group GmbH & Co. KGaA</h3>
+        <span>Frankfurt, Germany | May 2025 (expected)</span>
+      </div>
+      <div class="experience-item">
+        <h3>Financial Markets Summer Intern, Sales & Trading, Standard Chartered Bank AG</h3>
+        <span>Frankfurt, Germany | Jun – Aug 2024</span>
+        <ul>
+          <li>Automated bond redemption analyses with VBA macros.</li>
+          <li>Streamlined EM Credit sales desk reporting.</li>
+          <li>Researched JPY correlation for G10 FX swaps desk (Python).</li>
+        </ul>
+      </div>
+      <!-- Add more experience items similarly -->
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <h3>Master’s in Economics of Global Risks</h3>
+        <span>Toulouse School of Economics, France | Sep 2023 – Nov 2025</span>
+        <p>GPA: 15.6/20 (Very Good, UK First Class)</p>
+      </div>
+      <div class="edu-item">
+        <h3>B.Sc. in Economics</h3>
+        <span>University of Mannheim, Germany | 2020 – 2023</span>
+        <p>GPA: 1.9 (Good, UK First Class) <br> Thesis: Merger Waves and Dynamic Cartel Enforcement in US Airline Industry (Grade: 1.0).</p>
+      </div>
+      <!-- Add other education items -->
+    </section>
+
+    <section id="skills">
+      <h2>Skills & Tools</h2>
+      <p><strong>Languages:</strong> English & German (bilingual), French (C1)</p>
+      <p><strong>Technical:</strong> Python, VBA, SQL, R, Stata, Excel, PowerPoint</p>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements & Activities</h2>
+      <ul>
+        <li>UKMT Intermediate Mathematical Challenge: Gold (Top 8%)</li>
+        <li>Pink Kangaroo 2017: Merit (Top 25%)</li>
+        <li>Mannheim Investment Club: Emerging Markets Analyst</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer id="contact">
+    <p>Contact: <a href="mailto:koehler.alexander.markus@gmail.com">koehler.alexander.markus@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/alexander-markus-koehler/" target="_blank">LinkedIn</a> | <a href="https://github.com/Fijiman001" target="_blank">GitHub</a></p>
+    <p>&copy; 2025 Alexander M. Köhler</p>
+  </footer>
 </body>
 </html>
