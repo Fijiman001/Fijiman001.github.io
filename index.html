@@ -39,36 +39,46 @@
     </section>
 
     <section id="research">
-      <h2>Research & Projects</h2>
-      <div class="project">
-        <h3>Assessing Green Bond Yield Differences</h3>
-        <p>Analyzed the “greenium” using a matching method pairing green and conventional bonds based on maturity, credit rating, and issuer profile to isolate yield differences, minimizing omitted variable bias.
-        <a href="https://github.com/Fijiman001/EGR-Empirical-Project/blob/main/Empirical_Project__Final_Report__Liquidity_of_Green_Bonds.pdf" target="_blank">Report (PDF)</a>
-        <a href="https://github.com/Fijiman001/EGR-Empirical-Project" target="_blank">GitHub</a></p>
-      </div>
-      <div class="project">
-        <h3>Sunlight Synchronisation: DST & Emissions</h3>
-        <p>Studied the impact of Daylight Saving Time on CO₂ emissions and electricity consumption in Australia's electricity market using a Difference-in-Differences-in-Differences framework to control for state-specific shocks.
-        <a href="https://github.com/Fijiman001/applied-econometrics-dst/blob/master/FinalReport.pdf" target="_blank">Report (PDF)</a>
-        <a href="https://github.com/Fijiman001/applied-econometrics-dst" target="_blank">GitHub</a></p>
-      </div>
-      <div class="project">
-        <h3>Volatility & Risk Modeling in Financial Econometrics</h3>
-        <p>Implemented ARCH/GARCH and leverage-augmented models via hand-written QMLE on S&amp;P 500 returns to compare distributional assumptions, enhancing VaR forecasting. Applied PCA for factor extraction and continuous-time structural models to analyze market microstructure noise.</p>
-      </div>
-      <div class="project">
-        <h3>Extreme Risk Analysis of FX Markets</h3>
-        <p>Modeled tail risk in the USD–EUR exchange rate (2004–2023) using threshold exceedances and Generalised Pareto distributions, switching to Hill estimator for efficiency, and adjusting confidence intervals for serial dependence, revealing significant intra-day volatility risks.</p>
-      </div>
-      <div class="project">
-        <h3>Multivariate Time Series & Climatic Impacts</h3>
-        <p>Examined how extreme weather events affect insurance prices by estimating VAR models with climate risk indicators and disaster cost indices, using Granger causality and impulse response functions, and conducting robustness checks with CPI and PPI metrics.</p>
-      </div>
-      <div class="project">
-        <h3>Scoring & Default Prediction</h3>
-        <p>Compared logistic regression, Lasso/Ridge penalized methods, and ensemble classifiers (AdaBoost, LogitBoost) for credit default scoring, validating models via hold-out and K-fold cross-validation to ensure robust predictive performance.</p>
-      </div>
-    </section>
+        <h2>Research & Projects</h2>
+        
+        <div class="project">
+            <h3>Assessing Green Bond Yield Differences</h3>
+            <p>Employed a one-to‑one matching algorithm (Hungarian method) to pair 100 green bonds with conventional counterparts on maturity, coupon, issuer and issuance timing, after filtering out callable and supranational bonds to avoid optionality and benchmark distortions.  This quasi‑experimental setup minimises omitted‑variable bias and isolates the “greenium” effect on yield to maturity (YTM) :contentReference[oaicite:0]{index=0}.  Robustness checks included panel regressions with issuer fixed effects and macro controls (Euribor, Bund yield, VIX), which largely attenuated the greenium, highlighting sensitivity to model specification.  Finally, Nelson–Siegel–Svensson curve estimates for both bond groups revealed only marginal term‑structure divergences, suggesting liquidity and characteristic differences drive much of the observed spread.</p>
+            <p>
+            <a href="https://github.com/Fijiman001/EGR-Empirical-Project/blob/main/Empirical_Project__Final_Report__Liquidity_of_Green_Bonds.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/EGR-Empirical-Project" target="_blank">GitHub</a>
+            </p>
+        </div>
+        
+        <div class="project">
+            <h3>Sunlight Synchronisation: DST &amp; Emissions</h3>
+            <p>Analysed Australian electricity CO₂ emissions and consumption under heterogeneous Daylight Saving Time (DST) adoption using a Difference-in‑Differences‑in‑Differences (DDD) framework to control for state‑specific shocks and confounders :contentReference[oaicite:1]{index=1}&#8203;:contentReference[oaicite:2]{index=2}.  Leveraging an event‑study design across multiple years, we tested the robustness of the parallel‑trends assumption via pre‑trends checks and external control groups.  Results indicated a small, statistically insignificant reduction in emissions and consumption, with recent solar uptake amplifying DST’s environmental impact—motivating a deeper focus on post‑2015 solar penetration.  All code and data pipelines were scripted in R and Python, with extensive visual diagnostics (histograms, Q-Q plots) to validate distributional assumptions.
+            <p>
+            <a href="https://github.com/Fijiman001/applied-econometrics-dst/blob/master/FinalReport.pdf" target="_blank">Report (PDF)</a>
+            <a href="https://github.com/Fijiman001/applied-econometrics-dst" target="_blank">GitHub</a>
+            </p>
+        </div>
+        
+        <div class="project">
+            <h3>Volatility &amp; Risk Modeling in Financial Econometrics</h3>
+            <p>Implemented hand‑coded QMLE for ARCH, GARCH and leverage‑augmented (NAGARCH) models on 15 years of S&amp;P 500 returns, comparing Gaussian vs Student‑t errors to enhance one‑day VaR forecasts :contentReference[oaicite:3]{index=3}.  Applied PCA on S&amp;P 500 cross‑section to extract latent factors and contrasted with Fama‑French factors in observable covariance models, finding PCA‑based factors yielded superior coverage in UC tests.  Extended analysis to multivariate BEKK and constant‑correlation GARCH, demonstrating BEKK’s better fit (Kupiec and Christoffersen tests) despite higher computational cost.  Data handling and estimation were fully automated using Python (pandas, numpy) and cross‑validated via rolling windows.
+        </div>
+        
+        <div class="project">
+            <h3>Extreme Risk Analysis of FX Markets</h3>
+            <p>Studied USD–EUR daily log‑returns (2004–2023) using Peaks‑Over‑Threshold EVT: fitted Generalised Pareto MLE, then switched to Hill estimator when γ > 0 for efficiency, adjusting CIs for serial dependence :contentReference[oaicite:4]{index=4}.  Extrapolated 99.5% and 99.98% quantiles, revealing underestimation by empirical maxima and underscoring the need for systematic tail modeling in capital reserve calculations.  Graphical diagnostics (moment and Q‑Q plots) confirmed heavy tails; additional intra‑day high analysis via Weibull fits highlighted even greater tail risk.  Findings inform hedging strategies and regulatory stress‑testing for currency crises.
+        </div>
+        
+        <div class="project">
+            <h3>Multivariate Time Series &amp; Climatic Impacts</h3>
+            <p>Examined the impact of extreme weather on insurance prices by building a VAR model with media‑derived climate‑risk indices, inflation‑adjusted disaster costs, and CPI/PPI in Europe :contentReference[oaicite:5]{index=5}&#8203;:contentReference[oaicite:6]{index=6}.  After confirming no cointegration among I(1) variables, we selected lags via Hannan‑Quinn, then conducted Granger causality tests and computed impulse response functions to trace shock propagation.  Robustness checks swapped CPI for PPI to test producer‑ vs consumer‑side sensitivities; results showed persistent insurance price responses to climate shocks.  All time‑series estimation and diagnostics were performed in R (vars, tseries).
+        </div>
+        
+        <div class="project">
+            <h3>Scoring &amp; Default Prediction</h3>
+            <p>Benchmarking logistic regression against Lasso/Ridge penalised models and ensemble learners (AdaBoost, LogitBoost), we carried out extensive model selection on credit default data using Python’s scikit‑learn :contentReference[oaicite:7]{index=7}&#8203;:contentReference[oaicite:8]{index=8}.  Model performance was evaluated via hold‑out and 10‑fold cross‑validation, measuring accuracy, AUC, and Pseudo R², with PRE analyses to quantify error reductions.  Penalised methods improved variable selection and model sparsity; ensemble methods further enhanced predictive power by aggregating weak learners.  The final pipeline included automated hyperparameter tuning (grid search) and SHAP‑based interpretability assessments.
+        </div>
+        </section>
 
     <section id="experience">
       <h2>Professional Experience</h2>
@@ -126,4 +136,3 @@
   </footer>
 </body>
 </html>
-<!-- End of index.html -->
