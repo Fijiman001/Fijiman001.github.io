@@ -43,7 +43,6 @@
         
         <div class="project">
             <h3>Assessing Green Bond Yield Differences</h3>
-            <p>I use and compared multiple matching methods, in particular a one-to‑one matching algorithm (Hungarian method) to pair 100 green bonds with conventional counterparts on maturity, coupon, issuer and issuance timing, after filtering out callable and supranational bonds to avoid optionality and benchmark distortions.  This quasi‑experimental setup minimises omitted‑variable bias and isolates the “greenium” effect on yield to maturity (YTM).  Robustness checks included panel regressions with issuer fixed effects and macro controls (Euribor, Bund yield, VIX), which largely attenuated the greenium, highlighting sensitivity to model specification.  Finally, Nelson–Siegel–Svensson curve estimates for both bond groups revealed only marginal term‑structure divergences, suggesting liquidity and characteristic differences drive much of the observed spread.</p>
             <p>
                 One of my most recent applications of statistical methods was in my second year empirical
                 project in my masters analysing the existence of the “greenium” in corporate bonds. I chose
@@ -109,15 +108,15 @@
 
         <div class="project">
             <h3>Financial Econometrics 2</h3>
-            <p> Applied PCA on S&amp;P 500 cross‑section to extract latent factors and contrasted with Fama‑French factors in observable covariance models, finding PCA‑based factors yielded superior coverage in UC tests. 
-            <p>
-                To manage high-dimensional data, I applied Principal Component Analysis (PCA) for factor
-                extraction and dimensionality reduction, isolating the principal drivers of asset-price dynamics.
-                In another project analysing a portfolio of stocks, I used continuous time structural models
-                for high frequency data, studying market microstructure noise and estimator convergence for
-                volatility estimates. This involved evaluating estimator bias under autocorrelation—contrasting
-                naive OLS standard errors with Newey-West adjustments—and verifying convergence properties
-                across synchronous and asynchronous data streams.
+            <p> 
+                As part of the second major assignment we were tasked to forecast macroeconomic and financial variables using high-dimensional data. 
+                Guiding literature was given by Stock and Watson (2002), Ludvigson and Ng (2007 and 2009), with Carrasco and Rossi (2016) comparing
+                the results of dynamic factor models to other methods of reduction of dimensionality like Lasso. We decided to base our analysis on
+                the dataset FRED-MD created by McCracken and Ng (2015). FRED-MD is a large macroeconomic database of monthly frequency with many 
+                different macroecnomic variables. To manage the high-dimensional data, I applied Principal Component Analysis (PCA) for factor
+                extraction and dimensionality reduction. We obtain 8 factors that can be interpreted as real activity / employ, forward-looking variables 
+                (interest rate spreads, inventories) and inflation to name a few. Using the estimated factors, we forecast equity returns and compare our
+                results to more parsimonious models such as an AR(1).
             </p>
             <p>
             <a href=" " target="_blank">TO BE ADDED: Report (PDF)</a>
@@ -126,7 +125,14 @@
 
         <div class="project">
             <h3>Financial Econometrics 3</h3>
-            <p> Extended analysis to multivariate BEKK and constant‑correlation GARCH, demonstrating BEKK’s better fit (Kupiec and Christoffersen tests) despite higher computational cost.  Data handling and estimation were fully automated using Python (pandas, numpy) and cross‑validated via rolling windows.
+            <p> 
+              In the final assigment for Financial Econometrics we choose to estimate and use a multivariate GARCH model 
+              to forecast Value at Risk (VaR) levels and exceedances. Starting off with more simple univariate GARCH models,
+              we compare our forecasts to a diagonal GARCH model, constant‑correlation GARCH, and ultimately a multivariate 
+              BEKK model, with the latter being the most flexible and computationally expensive to estimate. We find a significantly
+              better out of sample forecasting with the more flexible multivariate GARCH model compared to more "naive" methods such 
+              as estimating the variance-covariance matrix and calculating the respective quantile.
+            </p>
             <p>
             <a href="https://github.com/Fijiman001/Financial-Econometrics/blob/main/Homework%204%20Serge/Financial_Econometrics_Project_Serge.pdf" target="_blank">Report (PDF)</a>
             <a href="https://github.com/Fijiman001/Financial-Econometrics/tree/main/Homework%204%20Serge" target="_blank">GitHub</a>
